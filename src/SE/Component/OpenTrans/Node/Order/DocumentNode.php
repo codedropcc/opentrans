@@ -28,6 +28,26 @@ use \SE\Component\OpenTrans\Node\Order\SummaryNode;
 class DocumentNode extends AbstractNode
 {
     /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("xmlns:xsi")
+     * @Serializer\Type("string")
+     * @Serializer\XmlAttribute
+     *
+     * @var string
+     */
+    protected $xsi = 'http://www.w3.org/2001/XMLSchema-instance';
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("xmlns:xsd")
+     * @Serializer\Type("string")
+     * @Serializer\XmlAttribute
+     *
+     * @var string
+     */
+    protected $xsd = 'http://www.w3.org/2001/XMLSchema';
+
+    /**
      *
      * @Serializer\Expose
      * @Serializer\SerializedName("version")
@@ -47,7 +67,17 @@ class DocumentNode extends AbstractNode
      *
      * @var string
      */
-    protected $type;
+    protected $type = 'standard';
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("xmlns")
+     * @Serializer\Type("string")
+     * @Serializer\XmlAttribute
+     *
+     * @var string
+     */
+    protected $xmlns = 'http://www.opentrans.org/XMLSchema/2.1';
 
     /**
      *
@@ -113,7 +143,7 @@ class DocumentNode extends AbstractNode
      */
     public function addItem(ItemNode $item)
     {
-        $this->items []= $item;
+        $this->items[] = $item;
     }
 
     /**
