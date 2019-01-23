@@ -87,12 +87,21 @@ class OrderInfoNode extends AbstractNode
     protected $orderParties;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("PARTIES")
+     * @Serializer\Type("SE\Component\OpenTrans\Node\Order\PartyCollectionNode")
+     *
+     * @var PartyCollectionNode
+     */
+    protected $parties;
+
+    /**
      *
      * @param \SE\Component\OpenTrans\Node\Order\RemarkNode $remark
      */
     public function addRemark(RemarkNode $remark)
     {
-        $this->remarks []= $remark;
+        $this->remarks[] = $remark;
     }
 
     /**
@@ -159,6 +168,14 @@ class OrderInfoNode extends AbstractNode
     }
 
     /**
+     * @param PartyCollectionNode $parties
+     */
+    public function setParties(PartyCollectionNode $parties)
+    {
+        $this->parties = $parties;
+    }
+
+    /**
      *
      * @return \SE\Component\OpenTrans\Node\Order\OrderPartiesNode
      */
@@ -191,7 +208,7 @@ class OrderInfoNode extends AbstractNode
      */
     public function setPayment($payment)
     {
-        if(is_string($payment) === true) {
+        if (is_string($payment) === true) {
             $payment = array($payment => array());
         }
 

@@ -15,6 +15,7 @@ use \JMS\Serializer\Annotation as Serializer;
 use \SE\Component\OpenTrans\Node\AbstractNode;
 use \SE\Component\OpenTrans\Node\Order\PartyIdNode;
 use \SE\Component\OpenTrans\Node\Order\AddressNode;
+use SE\Component\OpenTrans\Node\Order\PartyRoleNode;
 
 /**
  *
@@ -35,6 +36,15 @@ class PartyNode extends AbstractNode
      * @var \SE\Component\OpenTrans\Node\Order\PartyIdNode
      */
     protected $partyId;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\SerializedName("PARTY_TYPE")
+     * @Serializer\Type("SE\Component\OpenTrans\Node\Order\PartyRoleNode")
+     *
+     * @var PartyRoleNode
+     */
+    protected $partyRole;
 
     /**
      *
@@ -62,6 +72,22 @@ class PartyNode extends AbstractNode
     public function getPartyId()
     {
         return $this->partyId;
+    }
+
+    /**
+     * @param \SE\Component\OpenTrans\Node\Order\PartyRoleNode $partyRole
+     */
+    public function setPartyRole(PartyRoleNode $partyRole)
+    {
+        $this->partyRole = $partyRole;
+    }
+
+    /**
+     * @return \SE\Component\OpenTrans\Node\Order\PartyRoleNode
+     */
+    public function getPartyRole()
+    {
+        return $this->partyRole;
     }
 
     /**
