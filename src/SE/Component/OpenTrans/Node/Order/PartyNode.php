@@ -39,7 +39,7 @@ class PartyNode extends AbstractNode
 
     /**
      * @Serializer\Expose
-     * @Serializer\SerializedName("PARTY_TYPE")
+     * @Serializer\SerializedName("PARTY_ROLE")
      * @Serializer\Type("SE\Component\OpenTrans\Node\Order\PartyRoleNode")
      *
      * @var PartyRoleNode
