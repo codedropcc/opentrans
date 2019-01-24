@@ -49,7 +49,7 @@ class ItemNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("ARTICLE_PRICE")
+     * @Serializer\SerializedName("PRODUCT_PRICE_FIX")
      * @Serializer\Type("SE\Component\OpenTrans\Node\Order\ArticlePriceNode")
      *
      * @var \SE\Component\OpenTrans\Node\Order\ArticlePriceNode
