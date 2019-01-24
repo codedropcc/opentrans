@@ -36,12 +36,10 @@ class OrderSubscriber implements  EventSubscriberInterface
         /* Pre Serialize */
             'document_node.pre_serialize' => array(
                 array('onPreSerialize', 1),
-                array('onPreSerializePayment', 10)
             ),
         /* Post Serialize */
             'document_node.post_serialize' => array(
                 array('onPostSerialize', 1),
-                array('onPostSerializePayment', 10)
             ),
         /* Pre Deserialize */
             'document_node.pre_deserialize' => array(
@@ -50,7 +48,6 @@ class OrderSubscriber implements  EventSubscriberInterface
         /* Post Deserialize */
             'document_node.post_deserialize' => array(
                 array('onPostDeserialize', 1),
-                array('onPostDeserializePayment', 10)
             ),
         );
     }
@@ -60,42 +57,6 @@ class OrderSubscriber implements  EventSubscriberInterface
      * @param \SE\Component\OpenTrans\EventDispatcher\SerializeEvent $event
      */
     public function onPreSerialize(SerializeEvent $event){}
-
-    /**
-     *
-     * @param \SE\Component\OpenTrans\EventDispatcher\SerializeEvent $event
-     */
-    public function onPreSerializePayment(SerializeEvent $event)
-    {
-        if( (($document  = $event->getDocument())   instanceof Order\DocumentNode  === true) &&
-            (($header    = $document->getHeader())  instanceof Order\HeaderNode    === true) &&
-            (($orderInfo = $header->getOrderInfo()) instanceof Order\OrderInfoNode === true)
-        ) {
-            $payment = Util::arrayChangeKeyCaseRecursive(
-                $orderInfo->getPayment(),
-                CASE_UPPER
-            );
-            $orderInfo->setPayment($payment);
-        }
-    }
-
-    /**
-     *
-     * @param \SE\Component\OpenTrans\EventDispatcher\SerializeEvent $event
-     */
-    public function onPostSerializePayment(SerializeEvent $event)
-    {
-        if( (($document  = $event->getDocument())   instanceof Order\DocumentNode  === true) &&
-            (($header    = $document->getHeader())  instanceof Order\HeaderNode    === true) &&
-            (($orderInfo = $header->getOrderInfo()) instanceof Order\OrderInfoNode === true)
-        ) {
-            $payment = Util::arrayChangeKeyCaseRecursive(
-                $orderInfo->getPayment(),
-                CASE_LOWER
-            );
-            $orderInfo->setPayment($payment);
-        }
-    }
 
     /**
      *
