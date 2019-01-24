@@ -58,17 +58,6 @@ class OrderInfoNode extends AbstractNode
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("PAYMENT")
-     * @Serializer\Type("array<array, array>")
-     * @Serializer\XmlKeyValuePairs
-     *
-     * @var array
-     */
-    protected $payment = array();
-
-    /**
-     *
-     * @Serializer\Expose
      * @Serializer\Type("array<SE\Component\OpenTrans\Node\Order\RemarkNode>")
      * @Serializer\XmlList(inline=true, entry="REMARK")
      *
@@ -200,27 +189,5 @@ class OrderInfoNode extends AbstractNode
     public function getCurrency()
     {
         return $this->currency;
-    }
-
-    /**
-     *
-     * @param mixed $payment
-     */
-    public function setPayment($payment)
-    {
-        if (is_string($payment) === true) {
-            $payment = array($payment => array());
-        }
-
-        $this->payment = $payment;
-    }
-
-    /**
-     *
-     * @return array
-     */
-    public function getPayment()
-    {
-        return $this->payment;
     }
 }

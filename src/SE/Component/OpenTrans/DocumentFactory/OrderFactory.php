@@ -259,11 +259,7 @@ class OrderFactory extends AbstractDocumentFactory
      */
     public static function loadOrderInfo(NodeLoader $loader, OrderInfoNode $node, array $data)
     {
-        self::loadScalarArrayData($node, $data, array('remarks', 'order_parties', 'payment'));
-
-        if(isset($data['payment']) === true) {
-            $node->setPayment($data['payment']);
-        }
+        self::loadScalarArrayData($node, $data, array('remarks', 'order_parties'));
 
         if(isset($data['remarks']) === true && is_array($data['remarks']) === true) {
             self::loadRemarks($loader, $node, $data['remarks']);
