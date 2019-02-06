@@ -66,8 +66,7 @@ class PartyNode extends AbstractNode
     }
 
     /**
-     *
-     * @return string
+     * @return \SE\Component\OpenTrans\Node\Order\PartyIdNode
      */
     public function getPartyId()
     {
