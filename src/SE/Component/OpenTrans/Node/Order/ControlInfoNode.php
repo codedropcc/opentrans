@@ -29,6 +29,7 @@ class ControlInfoNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("GENERATOR_INFO")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -39,6 +40,7 @@ class ControlInfoNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("GENERATION_DATE")
      * @Serializer\Type("DateTime")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var \DateTime
      */

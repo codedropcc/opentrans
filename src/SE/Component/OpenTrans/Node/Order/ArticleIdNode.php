@@ -29,6 +29,7 @@ class ArticleIdNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("SUPPLIER_AID")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -39,6 +40,7 @@ class ArticleIdNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("BUYER_AID")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -49,6 +51,7 @@ class ArticleIdNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("INTERNATIONAL_AID")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -59,6 +62,7 @@ class ArticleIdNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("DESCRIPTION_SHORT")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -69,6 +73,7 @@ class ArticleIdNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("DESCRIPTION_LONG")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -79,6 +84,7 @@ class ArticleIdNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("MANUFACTURER_INFO")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

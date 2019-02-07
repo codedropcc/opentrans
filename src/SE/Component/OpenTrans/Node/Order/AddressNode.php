@@ -29,6 +29,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("NAME")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -39,6 +40,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("NAME2")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -49,6 +51,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("NAME3")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -59,6 +62,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("STREET")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -69,6 +73,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("ZIP")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -79,6 +84,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("CITY")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -89,6 +95,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("COUNTRY")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -99,6 +106,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("PHONE")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -109,6 +117,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("EMAIL")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -119,6 +128,7 @@ class AddressNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("CHARGE_VAT")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

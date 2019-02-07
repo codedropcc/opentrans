@@ -29,6 +29,7 @@ class SummaryNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("TOTAL_ITEM_NUM")
      * @Serializer\Type("integer")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var integer
      */

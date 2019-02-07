@@ -31,6 +31,7 @@ class ItemNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("LINE_ITEM_ID")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -41,6 +42,7 @@ class ItemNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("ARTICLE_ID")
      * @Serializer\Type("SE\Component\OpenTrans\Node\Order\ArticleIdNode")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\OpenTrans\Node\Order\ArticleIdNode
      */
@@ -51,6 +53,7 @@ class ItemNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("PRODUCT_PRICE_FIX")
      * @Serializer\Type("SE\Component\OpenTrans\Node\Order\ArticlePriceNode")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var \SE\Component\OpenTrans\Node\Order\ArticlePriceNode
      */
@@ -61,6 +64,7 @@ class ItemNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("QUANTITY")
      * @Serializer\Type("float")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var float
      */

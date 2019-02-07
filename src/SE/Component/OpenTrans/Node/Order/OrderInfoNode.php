@@ -31,6 +31,7 @@ class OrderInfoNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("ORDER_ID")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -40,6 +41,7 @@ class OrderInfoNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("ORDER_DATE")
      * @Serializer\Type("DateTime")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */

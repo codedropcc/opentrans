@@ -42,6 +42,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("FULL_PRICE")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -53,6 +54,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("PRICE_AMOUNT")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -63,6 +65,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("DISCOUNT_PERCENT")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
@@ -73,6 +76,7 @@ class ArticlePriceNode extends AbstractNode
      * @Serializer\Expose
      * @Serializer\SerializedName("DISCOUNT_VALUE")
      * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=false)
      *
      * @var string
      */
